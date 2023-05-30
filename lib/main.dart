@@ -15,7 +15,7 @@ void main() {
      highlightColor:CustomColors.primary,
      
      ),
-    title: 'khalid-alsaleh-dev',
+    title: 'Mahmoud-Alkateb-dev',
     home: const Portfolio(),
     debugShowCheckedModeBanner: false,
   ));
