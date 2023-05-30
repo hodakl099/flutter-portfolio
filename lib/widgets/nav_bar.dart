@@ -62,18 +62,18 @@ class NavBar extends StatelessWidget {
           NavBarItemWithIcon(
             text: 'github',
             icon: ImageAssetConstants.github,
-            url: 'https://github.com/khalid-alsaleh-dev',
+            url: 'https://github.com/hodakl099',
           ),
           SizedBox(width: 10),
           NavBarItemWithIcon(
-              text: 'facebook',
-              icon: ImageAssetConstants.facebook,
-              url: 'https://www.facebook.com/khalid.alsaleh.52090/'),
+              text: 'linkedin',
+              icon: ImageAssetConstants.stackoverflow,
+              url: 'https://stackoverflow.com/users/16528861/mado'),
           SizedBox(width: 10),
           NavBarItemWithIcon(
               text: 'linkedIn',
               icon: ImageAssetConstants.linkedIn,
-              url: 'https://www.linkedin.com/in/khalid-al-saleh-3561881a8/'),
+              url: 'https://www.linkedin.com/in/mahmood-alkateb-6526761a8/'),
           SizedBox(width: 50),
         ])
       ])
