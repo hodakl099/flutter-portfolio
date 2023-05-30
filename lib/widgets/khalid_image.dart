@@ -17,36 +17,36 @@ class KhalidImage extends StatelessWidget {
         Container(
           constraints:const BoxConstraints(maxWidth:370),
           child: Image.asset(
-            ImageAssetConstants.khalid,
+            ImageAssetConstants.mahmoud,
             width: width * 0.29,
             height: width * 0.3,
           ),
         ),
         Positioned(
-          top: width * 0.17,
+          top: width * 0.19,
           left: 0,
           child: Image.asset(
-            ImageAssetConstants.pythonCircle,
+            ImageAssetConstants.ktor,
             width: width * 0.07,
             height: width * 0.07,
           ),
         ),
         Positioned(
-          top: width * 0.19,
+          top: width * 0.20,
           right: width * 0.010,
           child: Image.asset(
             ImageAssetConstants.flutterCircle,
-            width: width * 0.083,
+            width: width * 0.07,
             height: width * 0.08,
           ),
         ),
         Positioned(
-          top: width * 0.06,
+          top: width * 0.047,
           right: width * 0.016,
           child: Image.asset(
-            ImageAssetConstants.javaCircle,
-            width: width * 0.06,
-            height: width * 0.058,
+            ImageAssetConstants.kotlin,
+            width: width * 0.05,
+            height: width * 0.040,
           ),
         ),
         Positioned(

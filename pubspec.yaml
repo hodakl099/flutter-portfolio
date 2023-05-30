@@ -36,8 +36,10 @@ flutter:
     - assets/images/flutter.png
     - assets/images/java.png
     - assets/images/python.png
-    - assets/images/khalid.png
+    - assets/images/mahmoudalkateb.png
     - assets/images/flutter_circle.png
     - assets/images/java_circle.png
     - assets/images/python_circle.png
     - assets/images/backend_icon.png
+    - assets/images/kotlin.png
+    - assets/images/ktor.png
