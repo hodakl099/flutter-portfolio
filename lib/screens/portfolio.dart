@@ -125,6 +125,8 @@ class _PortfolioState extends State<Portfolio> {
                     color:CustomColors.gray,
                   ),
                   RecentWork(),
+                  SizedBox(height: width * 0.03),
+                  const SizedBox(height:10),
                   Footer(width: width,scrollController: scrollController,),
                 ],
               ),
