@@ -17,7 +17,7 @@ class HelloWithBio extends StatelessWidget {
           Text('Hello! I’m Mahmoud Alkateb',
               style: GoogleFonts.getFont('Delius',
                   color: Colors.white, fontSize: 26)),
-          const SizedBox(height: 5),
+          const SizedBox(height: 20),
           Text(
               'I seek challenging opportunities where I can fully scale up my knowledge and skills.',
               style: GoogleFonts.getFont('Delius',

@@ -43,10 +43,10 @@ class LowerContainer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SkillCard(
-                            title: 'Flutter Development',
+                            title: 'Android Development',
                             description:
-                            'I’m developing cross-platform projects using standard Flutter libraries.',
-                            icon: ImageAssetConstants.kotlin,
+                            'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
+                            icon: ImageAssetConstants.jetpackcompose,
                             width: width,
                             ratio: 0.35),
                         const SizedBox(height: 10),
@@ -85,136 +85,63 @@ class LowerContainer extends StatelessWidget {
                     )
                   ],
                 );
-              } else {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    // skills cards
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SkillCard(
-                            title: 'Flutter Development',
-                            description:
-                                'I’m developing android,ios and web applications using flutter platform.',
-                            icon: ImageAssetConstants.kotlin,
-                            width: 2 * width,
-                            ratio: 0.45),
-                        const SizedBox(height: 10),
-                        SkillCard(
-                            title: 'Backend Development',
-                            description:
-                                'I’m developing backend applications using codnuit and spring boot with a good knowledge in nodejs.',
-                            icon: ImageAssetConstants.kotlin,
-                            width: 2 * width,
-                            ratio: 0.45),
-                        const SizedBox(height: 10),
-                        SkillCard(
-                            title: 'Python Development',
-                            description:
-                                'I’m developing maching learing and deep learning projects using standard python libraries and tensorflow api.',
-                            icon: ImageAssetConstants.kotlin,
-                            width: 2 * width,
-                            ratio: 0.45),
-                      ],
-                    ),
-                    // hello with bio and info
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        HelloWithBio(width: 3 * width,ratio: 0.3,),
-                        const SizedBox(
-                          height: 35,
-                        ),
-                        Info(width: 3 * width,ratio:0.3),
-                      ],
-                    )
-                  ],
-                );
+              }  else {
+              return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              // skills cards
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              SkillCard(
+              title: 'Android Development',
+              description:
+              'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
+              icon: ImageAssetConstants.jetpackcompose,
+              width: width,
+              ratio: 0.35),
+              const SizedBox(height: 10),
+              SkillCard(
+              title: 'Backend Development',
+              description:
+              'I’m developing server-side applications using Ktor.',
+              icon: ImageAssetConstants.ktor,
+              width: width,
+              ratio: 0.35,
+              ),
+              const SizedBox(height: 10),
+              SkillCard(
+              title: 'Flutter Development',
+              description:
+              'I’m developing cross-platform projects using standard Flutter libraries.',
+              icon: ImageAssetConstants.kotlin,
+              width: width,
+              ratio: 0.35),
+              ],
+              ),
+              // hello with bio and info
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              const SizedBox(
+              height: 30,
+              ),
+              HelloWithBio(width: 3 * width,ratio: 0.3,),
+              const SizedBox(
+              height: 35,
+              ),
+              Info(width: 3 * width,ratio:0.3),
+              ],
+              )
+              ],
+              );
               }
             }),
             SizedBox(
               height: width * 0.07,
             ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.only(left:width>=Breakpoints.lg? width * 0.1:width * 0.05),
-              child: Text('Some of my intrests',
-                  style: GoogleFonts.getFont('Delius',
-                      color: Colors.white, fontSize: 19)),
-            ),
+            Container(),
             SizedBox(height: width * 0.03),
-            // 820
-            LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth >= Breakpoints.lg) {
-                return SizedBox(
-                  width: width * 0.76,
-                  height: 100,
-                  child: StaggeredGridView.countBuilder(
-                    crossAxisCount: 8,
-                    itemCount: 8,
-                    itemBuilder: (BuildContext context, int index) => Intrest(
-                      intrest: intrests[index]['intrest'],
-                      color: intrests[index]['color'],
-                      textColor: intrests[index]['textColor'],
-                      key: index == 4 ? intrestsKey : null,
-                    ),
-                    staggeredTileBuilder: (int index) =>
-                        const StaggeredTile.fit(
-                      2,
-                    ),
-                    mainAxisSpacing: 10.0,
-                    crossAxisSpacing: 40.0,
-                  ),
-                );
-              } else if (constraints.maxWidth < Breakpoints.lg &&
-                  constraints.maxWidth >= Breakpoints.sm) {
-                return SizedBox(
-                  width: width * 0.76,
-                  height: 180,
-                  child: StaggeredGridView.countBuilder(
-                    crossAxisCount: 8,
-                    itemCount: 8,
-                    itemBuilder: (BuildContext context, int index) => Intrest(
-                      intrest: intrests[index]['intrest'],
-                      color: intrests[index]['color'],
-                      textColor: intrests[index]['textColor'],
-                      key: index == 4 ? intrestsKey : null,
-                    ),
-                    staggeredTileBuilder: (int index) =>
-                        const StaggeredTile.fit(
-                      4,
-                    ),
-                    mainAxisSpacing: 10.0,
-                    crossAxisSpacing: 40.0,
-                  ),
-                );
-              } else {
-                return SizedBox(
-                  width: width * 0.76,
-                  height: 360,
-                  child: StaggeredGridView.countBuilder(
-                    crossAxisCount: 8,
-                    itemCount: 8,
-                    itemBuilder: (BuildContext context, int index) => Intrest(
-                      intrest: intrests[index]['intrest'],
-                      color: intrests[index]['color'],
-                      textColor: intrests[index]['textColor'],
-                      key: index == 4 ? intrestsKey : null,
-                    ),
-                    staggeredTileBuilder: (int index) =>
-                        const StaggeredTile.fit(
-                      8,
-                    ),
-                    mainAxisSpacing: 10.0,
-                    crossAxisSpacing: 40.0,
-                  ),
-                );
-              }
-            }),
             const SizedBox(height:10)
         
           ],
