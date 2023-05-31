@@ -26,15 +26,15 @@ class Description extends StatelessWidget {
               alignment: Alignment.center,
               color: CustomColors.primary,
               child: Center(
-                  child: Text('Software Engineer',
+                  child: Text('Software Developer',
                       style: GoogleFonts.getFont('Days One',
                           color: Colors.black, fontSize: 10)))),
           SizedBox(height: 0.015 * width),
-          Text('Talk is cheap.',
+          Text('Think and create.',
               style: GoogleFonts.getFont('Delius',
                   color: Colors.white, fontSize: 30)),
           const SizedBox(height: 5),
-          Text('Show me the code.',
+          Text('Open to work.',
               style: GoogleFonts.getFont('Delius',
                   color: Colors.white, fontSize: 30)),
           const SizedBox(height: 20),
@@ -46,7 +46,7 @@ class Description extends StatelessWidget {
               pause: const Duration(seconds: 2),
               animatedTexts: [
                 TyperAnimatedText(
-                    "I'm developing mobile,frontend and backend applications",
+                    "I'm developing Android mobile applications.",
                     textAlign: isVertical ? TextAlign.center : TextAlign.start,
                     textStyle: GoogleFonts.getFont('Delius',
                         color: CustomColors.gray,
@@ -56,7 +56,7 @@ class Description extends StatelessWidget {
           ),
           InkWell(
             onTap: () async => !await launch(
-                'https://mail.google.com/mail/u/0/?fs=1&to=khalidlionel.2089@gmail.com&tf=cm'),
+                'https://t.me/AMD99s'),
             child: Text("Let's chat",
                 style: GoogleFonts.getFont('Delius',
                     decoration: TextDecoration.underline,

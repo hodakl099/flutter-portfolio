@@ -23,7 +23,7 @@ class KhalidImage extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: width * 0.19,
+          top: width * 0.21,
           left: 0,
           child: Image.asset(
             ImageAssetConstants.ktor,
@@ -33,16 +33,16 @@ class KhalidImage extends StatelessWidget {
         ),
         Positioned(
           top: width * 0.20,
-          right: width * 0.010,
+          right: width * 0.009,
           child: Image.asset(
-            ImageAssetConstants.flutterCircle,
+            ImageAssetConstants.jetpackcompose,
             width: width * 0.07,
             height: width * 0.08,
           ),
         ),
         Positioned(
-          top: width * 0.047,
-          right: width * 0.016,
+          top: width * 0.040,
+          right: width * 0.009,
           child: Image.asset(
             ImageAssetConstants.kotlin,
             width: width * 0.05,

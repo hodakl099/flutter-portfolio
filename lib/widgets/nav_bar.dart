@@ -64,9 +64,9 @@ class NavBar extends StatelessWidget {
             icon: ImageAssetConstants.github,
             url: 'https://github.com/hodakl099',
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 10,),
           NavBarItemWithIcon(
-              text: 'linkedin',
+              text: 'stackoverflow',
               icon: ImageAssetConstants.stackoverflow,
               url: 'https://stackoverflow.com/users/16528861/mado'),
           SizedBox(width: 10),
@@ -102,16 +102,16 @@ class NavBar extends StatelessWidget {
       NavBarItem(
           text: 'github',
           onTap: () async {
-            await launch('https://github.com/khalid-alsaleh-dev');
+            await launch('https://github.com/hodakl099');
           }),
       NavBarItem(
-          text: 'facebook',
+          text: 'stackoverflow',
           onTap: () async =>
-              await launch('https://www.facebook.com/khalid.alsaleh.52090/')),
+              await launch('https://stackoverflow.com/users/16528861/mado')),
       NavBarItem(
           text: 'linkedIn',
           onTap: () async => await launch(
-              'https://www.linkedin.com/in/khalid-al-saleh-3561881a8/')),
+              'https://www.linkedin.com/in/mahmood-alkateb-6526761a8/')),
     ];
     return Stack(
       children: [

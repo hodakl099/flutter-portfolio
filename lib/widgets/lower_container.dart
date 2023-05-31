@@ -43,28 +43,27 @@ class LowerContainer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SkillCard(
-                          title: 'Flutter Development',
-                          description:
-                              'I’m developing android,ios and web applications using flutter platform.',
-                          icon: ImageAssetConstants.flutter,
-                          width: width,
-                          ratio: 0.35,
-                        ),
+                            title: 'Flutter Development',
+                            description:
+                            'I’m developing cross-platform projects using standard Flutter libraries.',
+                            icon: ImageAssetConstants.kotlin,
+                            width: width,
+                            ratio: 0.35),
                         const SizedBox(height: 10),
                         SkillCard(
                           title: 'Backend Development',
                           description:
-                              'I’m developing backend applications using codnuit and spring boot with a good knowledge in nodejs.',
-                          icon: ImageAssetConstants.backendIcon,
+                              'I’m developing server-side applications using Ktor.',
+                          icon: ImageAssetConstants.ktor,
                           width: width,
                           ratio: 0.35,
                         ),
                         const SizedBox(height: 10),
                         SkillCard(
-                            title: 'Python Development',
+                            title: 'Flutter Development',
                             description:
-                                'I’m developing maching learing and deep learning projects using standard python libraries and tensorflow api.',
-                            icon: ImageAssetConstants.python,
+                                'I’m developing cross-platform projects using standard Flutter libraries.',
+                            icon: ImageAssetConstants.kotlin,
                             width: width,
                             ratio: 0.35),
                       ],
@@ -98,7 +97,7 @@ class LowerContainer extends StatelessWidget {
                             title: 'Flutter Development',
                             description:
                                 'I’m developing android,ios and web applications using flutter platform.',
-                            icon: ImageAssetConstants.flutter,
+                            icon: ImageAssetConstants.kotlin,
                             width: 2 * width,
                             ratio: 0.45),
                         const SizedBox(height: 10),
@@ -106,7 +105,7 @@ class LowerContainer extends StatelessWidget {
                             title: 'Backend Development',
                             description:
                                 'I’m developing backend applications using codnuit and spring boot with a good knowledge in nodejs.',
-                            icon: ImageAssetConstants.backendIcon,
+                            icon: ImageAssetConstants.kotlin,
                             width: 2 * width,
                             ratio: 0.45),
                         const SizedBox(height: 10),
@@ -114,7 +113,7 @@ class LowerContainer extends StatelessWidget {
                             title: 'Python Development',
                             description:
                                 'I’m developing maching learing and deep learning projects using standard python libraries and tensorflow api.',
-                            icon: ImageAssetConstants.python,
+                            icon: ImageAssetConstants.kotlin,
                             width: 2 * width,
                             ratio: 0.45),
                       ],
