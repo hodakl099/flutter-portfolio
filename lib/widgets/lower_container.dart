@@ -46,14 +46,14 @@ class LowerContainer extends StatelessWidget {
                             title: 'Android Development',
                             description:
                             'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
-                            icon: ImageAssetConstants.jetpackcompose,
+                            icon: ImageAssetConstants.jetpackCompose,
                             width: width,
                             ratio: 0.35),
                         const SizedBox(height: 10),
                         SkillCard(
                           title: 'Backend Development',
                           description:
-                              'I’m developing server-side applications using Ktor.',
+                              'I’m developing server-side applications using Ktor libraries.',
                           icon: ImageAssetConstants.ktor,
                           width: width,
                           ratio: 0.35,
@@ -63,7 +63,7 @@ class LowerContainer extends StatelessWidget {
                             title: 'Flutter Development',
                             description:
                                 'I’m developing cross-platform projects using standard Flutter libraries.',
-                            icon: ImageAssetConstants.kotlin,
+                            icon: ImageAssetConstants.flutterLogo,
                             width: width,
                             ratio: 0.35),
                       ],
@@ -97,14 +97,14 @@ class LowerContainer extends StatelessWidget {
               title: 'Android Development',
               description:
               'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
-              icon: ImageAssetConstants.jetpackcompose,
+              icon: ImageAssetConstants.jetpackCompose,
               width: width,
               ratio: 0.35),
               const SizedBox(height: 10),
               SkillCard(
               title: 'Backend Development',
               description:
-              'I’m developing server-side applications using Ktor.',
+              'I’m developing server-side applications using Ktor libraries.',
               icon: ImageAssetConstants.ktor,
               width: width,
               ratio: 0.35,
@@ -114,7 +114,7 @@ class LowerContainer extends StatelessWidget {
               title: 'Flutter Development',
               description:
               'I’m developing cross-platform projects using standard Flutter libraries.',
-              icon: ImageAssetConstants.kotlin,
+              icon: ImageAssetConstants.flutterLogo,
               width: width,
               ratio: 0.35),
               ],
@@ -140,10 +140,6 @@ class LowerContainer extends StatelessWidget {
             SizedBox(
               height: width * 0.07,
             ),
-            Container(),
-            SizedBox(height: width * 0.03),
-            const SizedBox(height:10)
-        
           ],
         ));
   }

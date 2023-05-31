@@ -7,6 +7,8 @@ import 'package:portfolio/widgets/lower_container.dart';
 import 'package:portfolio/widgets/upper_container.dart';
 import 'package:portfolio/widgets/nav_bar.dart';
 
+import '../widgets/recent_work/recent_work.dart';
+
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
 
@@ -122,6 +124,7 @@ class _PortfolioState extends State<Portfolio> {
                     height: 0.1,
                     color:CustomColors.gray,
                   ),
+                  RecentWork(),
                   Footer(width: width,scrollController: scrollController,),
                 ],
               ),

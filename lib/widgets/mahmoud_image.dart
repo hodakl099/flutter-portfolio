@@ -35,7 +35,7 @@ class KhalidImage extends StatelessWidget {
           top: width * 0.20,
           right: width * 0.009,
           child: Image.asset(
-            ImageAssetConstants.jetpackcompose,
+            ImageAssetConstants.jetpackCompose,
             width: width * 0.07,
             height: width * 0.08,
           ),
