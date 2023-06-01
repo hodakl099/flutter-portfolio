@@ -79,17 +79,25 @@ class RecentWorkWidget extends StatelessWidget {
                 subTitle: "My Strong Arenas",
                 color: Color(0xFFFFB100),
               ),
-              SizedBox(height: kDefaultPadding * 1.5),
+              const SizedBox(height: kDefaultPadding * 1.5),
               SizedBox(
                 width: 900,
                 child: Column(
                   children: List.generate(
-                    recentWorks.length,
-                        (index) =>
-                        RecentWorkCard(index: index,
+                    recentWorks.length * 2 - 1,
+                        (index) {
+                      if (index.isOdd) {
+                        return SizedBox(height: 20);
+                      } else {
+                        final cardIndex = index ~/ 2;
+                        return RecentWorkCard(
+                          index: cardIndex,
                           press: () {},
                           key: null,
-                          url: recentWorks[index].url,)
+                          url: recentWorks[cardIndex].url,
+                        );
+                      }
+                    },
                   ),
                 ),
               ),
