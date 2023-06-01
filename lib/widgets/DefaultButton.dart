@@ -10,9 +10,12 @@ class DefaultButton extends StatelessWidget {
     required this.imageSrc,
     required this.text,
     required this.press,
+    this.fontSize = 14,
+    this.imageHeight = 40
   }) : super(key: key);
 
   final String imageSrc, text;
+  final double fontSize,imageHeight;
   final VoidCallback press;
 
   @override
@@ -30,9 +33,14 @@ class DefaultButton extends StatelessWidget {
       onPressed: press,
       child: Row(
         children: [
-          Image.asset(imageSrc, height: 40),
+          Image.asset(imageSrc, height: imageHeight),
           const SizedBox(width: kDefaultPadding),
-          Text(text),
+          Text(
+              text,
+            style: TextStyle(
+              fontSize: fontSize
+            ),
+          ),
         ],
       ),
     );

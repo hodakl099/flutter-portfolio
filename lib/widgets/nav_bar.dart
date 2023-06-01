@@ -11,14 +11,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 class NavBar extends StatelessWidget {
   final double width;
-  final GlobalKey intrestsKey;
   final GlobalKey skillsKey;
   final GlobalKey recentWorkKey;
   final ScrollController scrollController;
   late final RxDouble collapsableHeight;
   NavBar(
       {required this.width,
-      required this.intrestsKey,
       required this.skillsKey,
       required this.scrollController,
       required this.recentWorkKey,
@@ -53,8 +51,8 @@ class NavBar extends StatelessWidget {
             NavBarItem(
                 text: 'Skills', onTap: () => scrollToWidgetByKey(skillsKey)),
             NavBarItem(
-              text: 'Intrests',
-              onTap: () => scrollToWidgetByKey(intrestsKey),
+              text: 'Projects',
+              onTap: () => scrollToWidgetByKey(recentWorkKey),
             ),
             const SizedBox(width: 60),
           ]),
@@ -83,12 +81,14 @@ class NavBar extends StatelessWidget {
     List<Widget>? navBarColumn = [
       NavBarItem(
           text: 'Home',
+          fontSize: 8.0,
           onTap: () {
             collapsableHeight.value = 0.0;
           }),
       const SizedBox(width: 10),
       NavBarItem(
           text: 'Skills',
+          fontSize: 8.0,
           onTap: () {
             scrollToWidgetByKey(skillsKey);
 
@@ -97,21 +97,25 @@ class NavBar extends StatelessWidget {
       const SizedBox(width: 10),
       NavBarItem(
           text: 'Projects',
+          fontSize: 8.0,
           onTap: () {
             scrollToWidgetByKey(recentWorkKey);
             collapsableHeight.value = 0.0;
           }),
       NavBarItem(
           text: 'github',
+          fontSize: 8.0,
           onTap: () async {
             await launch('https://github.com/hodakl099');
           }),
       NavBarItem(
           text: 'stackoverflow',
+          fontSize: 8.0,
           onTap: () async =>
               await launch('https://stackoverflow.com/users/16528861/mado')),
       NavBarItem(
           text: 'linkedIn',
+          fontSize: 8.0,
           onTap: () async => await launch(
               'https://www.linkedin.com/in/mahmood-alkateb-6526761a8/')),
     ];

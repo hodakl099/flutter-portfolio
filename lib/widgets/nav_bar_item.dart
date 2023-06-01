@@ -4,9 +4,10 @@ import 'package:portfolio/utils/custom_colors.dart';
 
 class NavBarItem extends StatelessWidget {
   final String text;
+  final double fontSize;
   final Function onTap;
   late final RxBool isHighlited;
-  NavBarItem({required this.text, required this.onTap, Key? key})
+  NavBarItem({required this.text, required this.onTap, this.fontSize = 12.0, Key? key})
       : super(key: key) {
     isHighlited = false.obs;
   }
@@ -38,7 +39,7 @@ class NavBarItem extends StatelessWidget {
                 Text(
                   text,
                   style: TextStyle(
-                    fontSize: 12.0,
+                    fontSize: fontSize,
                     color: data.value
                         ? CustomColors.primary
                         : Colors.white,

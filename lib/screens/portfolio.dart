@@ -17,7 +17,6 @@ class Portfolio extends StatefulWidget {
 }
 
 class _PortfolioState extends State<Portfolio> {
-  late final GlobalKey intrestsKey;
   late final GlobalKey recentWorkKey;
   late final GlobalKey skillsKey;
   late final GlobalKey homeKey;
@@ -26,7 +25,6 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   void initState() {
-    intrestsKey = GlobalKey();
     skillsKey = GlobalKey();
     homeKey = GlobalKey();
     recentWorkKey = GlobalKey();
@@ -74,14 +72,13 @@ class _PortfolioState extends State<Portfolio> {
                   UpperContainer(width: width),
                   LowerContainer(
                       width: width,
-                      intrestsKey: intrestsKey,
                       skillsKey: skillsKey),
                   Container(
                     width: width,
                     height: 0.1,
                     color:CustomColors.gray,
                   ),
-                  RecentWorkWidget(globalKey: recentWorkKey),
+                  RecentWorkWidget(recentWorkKey: recentWorkKey),
                   SizedBox(height: width * 0.03),
                   const SizedBox(height:10),
                   Footer(width: width,scrollController: scrollController,),
@@ -90,7 +87,6 @@ class _PortfolioState extends State<Portfolio> {
               NavBar(
                 width: width,
                 skillsKey: skillsKey,
-                intrestsKey: intrestsKey,
                 key: homeKey,
                 recentWorkKey: recentWorkKey,
                 scrollController: scrollController,

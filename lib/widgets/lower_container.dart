@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
 import 'package:portfolio/utils/image_asset_constants.dart';
 import 'package:portfolio/widgets/hello_with_bio.dart';
 import 'package:portfolio/widgets/info.dart';
-import 'package:portfolio/widgets/intrest.dart';
 import 'package:portfolio/widgets/skill_card.dart';
 
 class LowerContainer extends StatelessWidget {
   final double width;
-  final GlobalKey intrestsKey;
   final GlobalKey skillsKey;
 
   const LowerContainer(
       {Key? key,
       required this.width,
-      required this.intrestsKey,
       required this.skillsKey})
       : super(key: key);
 
@@ -40,6 +35,7 @@ class LowerContainer extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        Text('${constraints.maxWidth}'),
                         SkillCard(
                             title: 'Android Development',
                             description:
