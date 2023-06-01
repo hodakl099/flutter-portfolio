@@ -26,7 +26,7 @@ class UpperContainer extends StatelessWidget {
                 width: width,
               ),
               const SizedBox(width: 20),
-              KhalidImage(
+              MahmoudImage(
                 width: width,
               )
             ],
@@ -36,7 +36,7 @@ class UpperContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(width: width * 0.07),
-              KhalidImage(width: (2 * width) - 0.16 * width),
+              MahmoudImage(width: (2 * width) - 0.16 * width),
               SizedBox(height: 0.05 * width),
               Description(
                 isVertical: true,
@@ -49,7 +49,7 @@ class UpperContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(width: width * 0.07),
-              Center(child: KhalidImage(width: 2 * width)),
+              Center(child: MahmoudImage(width: 2 * width)),
               SizedBox(height: 0.05 * width),
               Description(isVertical: true, width: width),
             ],

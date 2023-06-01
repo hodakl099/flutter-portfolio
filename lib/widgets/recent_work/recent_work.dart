@@ -30,7 +30,7 @@ class RecentWork extends StatelessWidget {
             child: HireMeCard(),
           ),
           const SectionTitle(
-            title: "Recent Woorks",
+            title: "Recent Projects",
             subTitle: "My Strong Arenas",
             color: Color(0xFFFFB100),
           ),

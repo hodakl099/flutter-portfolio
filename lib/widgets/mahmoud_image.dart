@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/custom_colors.dart';
 import 'package:portfolio/utils/image_asset_constants.dart';
 
-class KhalidImage extends StatelessWidget {
+class MahmoudImage extends StatelessWidget {
   final double width;
-  const KhalidImage({
+  const MahmoudImage({
     required this.width,
     Key? key,
   }) : super(key: key);

@@ -10,14 +10,14 @@ class RecentWork {
 List<RecentWork> recentWorks = [
   RecentWork(
     id: 1,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
-    image: "assets/images/work_1.png",
+    title: "Guessing Word Android game.",
+    category: "Android App",
+    image: "assets/images/android.png",
   ),
   RecentWork(
     id: 2,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
+    title: "Ktor web server for Guessing mobile App Game",
+    category: "Web server-side",
     image: "assets/images/work_2.png",
   ),
   RecentWork(
