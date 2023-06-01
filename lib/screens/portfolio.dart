@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/models/RecentWork.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
 import 'package:portfolio/widgets/footer.dart';
 import 'package:portfolio/widgets/lower_container.dart';
+import 'package:portfolio/widgets/recent_work/recent_work.dart';
 import 'package:portfolio/widgets/upper_container.dart';
 import 'package:portfolio/widgets/nav_bar.dart';
-
-import '../widgets/recent_work/recent_work.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -17,8 +17,8 @@ class Portfolio extends StatefulWidget {
 }
 
 class _PortfolioState extends State<Portfolio> {
-  late final List<Map> intrests;
   late final GlobalKey intrestsKey;
+  late final GlobalKey recentWorkKey;
   late final GlobalKey skillsKey;
   late final GlobalKey homeKey;
   late final ScrollController scrollController;
@@ -29,51 +29,9 @@ class _PortfolioState extends State<Portfolio> {
     intrestsKey = GlobalKey();
     skillsKey = GlobalKey();
     homeKey = GlobalKey();
+    recentWorkKey = GlobalKey();
     scrollController = ScrollController();
     showFloatingButton = false.obs;
-
-    intrests = [
-      {
-        'intrest': 'Beatbox',
-        'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
-      },
-      {
-        'intrest': 'Chess',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Soccer',
-        'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
-      },
-      {
-        'intrest': 'Listening to music',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Watching movies',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Math',
-        'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
-      },
-      {
-        'intrest': 'Learning English',
-        'color': CustomColors.brightBackground,
-        'textColor': CustomColors.primary,
-      },
-      {
-        'intrest': 'Solving Problems',
-        'color': CustomColors.primary,
-        'textColor': CustomColors.darkBackground,
-      },
-    ];
 
     scrollController.addListener(() {
       if (scrollController.offset >= Breakpoints.floatingButton) {
@@ -116,7 +74,6 @@ class _PortfolioState extends State<Portfolio> {
                   UpperContainer(width: width),
                   LowerContainer(
                       width: width,
-                      intrests: intrests,
                       intrestsKey: intrestsKey,
                       skillsKey: skillsKey),
                   Container(
@@ -124,7 +81,7 @@ class _PortfolioState extends State<Portfolio> {
                     height: 0.1,
                     color:CustomColors.gray,
                   ),
-                  RecentWork(),
+                  RecentWorkWidget(globalKey: recentWorkKey),
                   SizedBox(height: width * 0.03),
                   const SizedBox(height:10),
                   Footer(width: width,scrollController: scrollController,),
@@ -135,6 +92,7 @@ class _PortfolioState extends State<Portfolio> {
                 skillsKey: skillsKey,
                 intrestsKey: intrestsKey,
                 key: homeKey,
+                recentWorkKey: recentWorkKey,
                 scrollController: scrollController,
               ),
             ],

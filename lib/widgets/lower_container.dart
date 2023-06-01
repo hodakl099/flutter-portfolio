@@ -11,14 +11,12 @@ import 'package:portfolio/widgets/skill_card.dart';
 
 class LowerContainer extends StatelessWidget {
   final double width;
-  final List<Map> intrests;
   final GlobalKey intrestsKey;
   final GlobalKey skillsKey;
 
   const LowerContainer(
       {Key? key,
       required this.width,
-      required this.intrests,
       required this.intrestsKey,
       required this.skillsKey})
       : super(key: key);

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/DefaultButton.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../models/RecentWork.dart';
 import '../../utils/constants.dart';
+import '../../utils/custom_colors.dart';
 
 
 class RecentWorkCard extends StatefulWidget {
@@ -9,10 +12,12 @@ class RecentWorkCard extends StatefulWidget {
     required Key? key,
     required this.index,
     required this.press,
+    required this.url
   }) : super(key: key);
 
   final int index;
   final VoidCallback press;
+  final String url;
 
   @override
   _RecentWorkCardState createState() => _RecentWorkCardState();
@@ -58,11 +63,21 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                           .headlineSmall
                           ?.copyWith(height: 1.5),
                     ),
+                
                     SizedBox(height: kDefaultPadding),
-                    const Text(
-                      "View Details",
-                      style: TextStyle(decoration: TextDecoration.underline),
-                    )
+               TextButton(
+                    style: TextButton.styleFrom(
+            padding: const EdgeInsets.symmetric(
+            vertical: kDefaultPadding,
+            horizontal: kDefaultPadding * 2.5,
+            ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          primary: CustomColors.gray,
+          foregroundColor: CustomColors.primary
+      ),
+      onPressed: () async =>
+                   await launch(widget.url), child: const Text('View Details'),
+               ),
                   ],
                 ),
               ),

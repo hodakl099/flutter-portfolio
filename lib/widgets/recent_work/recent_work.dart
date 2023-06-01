@@ -8,7 +8,13 @@ import '../../utils/constants.dart';
 import '../hire_me_card.dart';
 import '../section_title.dart';
 
-class RecentWork extends StatelessWidget {
+
+
+class RecentWorkWidget extends StatelessWidget {
+  final GlobalKey globalKey;
+  
+  const RecentWorkWidget({Key? key, required this.globalKey}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +48,7 @@ class RecentWork extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 recentWorks.length,
-                    (index) => RecentWorkCard(index: index, press: () {}, key: null,),
+                    (index) => RecentWorkCard(index: index, press: () {}, key: null, url: recentWorks[index].url,),
               ),
             ),
           ),
