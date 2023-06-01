@@ -30,7 +30,8 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
+        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
         height: 320,
         width: 540,
         decoration: BoxDecoration(

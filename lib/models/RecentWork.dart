@@ -16,14 +16,14 @@ List<RecentWork> recentWorks = [
   ),
   RecentWork(
     id: 2,
-    title: "Ktor web server for Guessing mobile App Game",
+    title: "Ktor web-server side.",
     category: "Web server-side",
-    image: "assets/images/work_2.png",
+    image: "assets/images/server.png",
   ),
   RecentWork(
     id: 3,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
+    title: "Multi-Module architecture Calories Tracker Application",
+    category: "Android-Jetpack compose.",
     image: "assets/images/work_3.png",
   ),
   RecentWork(
