@@ -82,16 +82,14 @@ class RecentWorkWidget extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 1.5),
               SizedBox(
                 width: 900,
-                child: Wrap(
-                  spacing: kDefaultPadding,
-                  runSpacing: kDefaultPadding * 2,
+                child: Column(
                   children: List.generate(
                     recentWorks.length,
                         (index) =>
                         RecentWorkCard(index: index,
                           press: () {},
                           key: null,
-                          url: recentWorks[index].url,),
+                          url: recentWorks[index].url,)
                   ),
                 ),
               ),
