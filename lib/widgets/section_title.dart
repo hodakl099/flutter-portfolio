@@ -9,9 +9,11 @@ class SectionTitle extends StatelessWidget {
     required this.title,
     required this.subTitle,
     required this.color,
+    this.fontSize = 64
   }) : super(key: key);
 
   final String title, subTitle;
+  final double fontSize;
   final Color color;
 
   @override
@@ -48,7 +50,7 @@ class SectionTitle extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .displayMedium
-                    ?.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+                    ?.copyWith(fontWeight: FontWeight.bold, color: Colors.black, fontSize: fontSize),
               )
             ],
           )

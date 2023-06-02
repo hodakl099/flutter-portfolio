@@ -12,12 +12,16 @@ class RecentWorkCard extends StatefulWidget {
     required Key? key,
     required this.index,
     required this.press,
-    required this.url
+    required this.url,
+    this.height = 320,
+    this.width = 540
   }) : super(key: key);
 
   final int index;
   final VoidCallback press;
   final String url;
+  final double width;
+  final double height;
 
   @override
   _RecentWorkCardState createState() => _RecentWorkCardState();
@@ -37,8 +41,8 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-        height: 320,
-        width: 540,
+        height: widget.height,
+        width: widget.width,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -49,7 +53,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
             Image.asset(recentWorks[widget.index].image),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
