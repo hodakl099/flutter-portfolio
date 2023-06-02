@@ -10,10 +10,7 @@ class LowerContainer extends StatelessWidget {
   final double width;
   final GlobalKey skillsKey;
 
-  const LowerContainer(
-      {Key? key,
-      required this.width,
-      required this.skillsKey})
+  const LowerContainer({Key? key, required this.width, required this.skillsKey})
       : super(key: key);
 
   @override
@@ -35,11 +32,10 @@ class LowerContainer extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('${constraints.maxWidth}'),
                         SkillCard(
                             title: 'Android Development',
                             description:
-                            'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
+                                'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
                             icon: ImageAssetConstants.jetpackCompose,
                             width: width,
                             ratio: 0.35),
@@ -68,67 +64,70 @@ class LowerContainer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         HelloWithBio(
-                          ratio:0.4 ,
+                          ratio: 0.4,
                           width: width,
                         ),
                         const SizedBox(
                           height: 30,
                         ),
-                        Info(width: width,ratio:0.4)
+                        Info(width: width, ratio: 0.4)
                       ],
                     )
                   ],
                 );
-              }  else {
-              return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-              // skills cards
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-              SkillCard(
-              title: 'Android Development',
-              description:
-              'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
-              icon: ImageAssetConstants.jetpackCompose,
-              width: width,
-              ratio: 0.35),
-              const SizedBox(height: 10),
-              SkillCard(
-              title: 'Backend Development',
-              description:
-              'I’m developing server-side applications using Ktor libraries.',
-              icon: ImageAssetConstants.ktor,
-              width: width,
-              ratio: 0.35,
-              ),
-              const SizedBox(height: 10),
-              SkillCard(
-              title: 'Flutter Development',
-              description:
-              'I’m developing cross-platform projects using standard Flutter libraries.',
-              icon: ImageAssetConstants.flutterLogo,
-              width: width,
-              ratio: 0.35),
-              ],
-              ),
-              // hello with bio and info
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-              const SizedBox(
-              height: 30,
-              ),
-              HelloWithBio(width: 3 * width,ratio: 0.3,),
-              const SizedBox(
-              height: 35,
-              ),
-              Info(width: 3 * width,ratio:0.3),
-              ],
-              )
-              ],
-              );
+              } else {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    // skills cards
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SkillCard(
+                            title: 'Android Development',
+                            description:
+                                'I’m developing Android apps using standard Android libraries, XML, and jetpack compose.',
+                            icon: ImageAssetConstants.jetpackCompose,
+                            width: width,
+                            ratio: 0.35),
+                        const SizedBox(height: 10),
+                        SkillCard(
+                          title: 'Backend Development',
+                          description:
+                              'I’m developing server-side applications using Ktor libraries.',
+                          icon: ImageAssetConstants.ktor,
+                          width: width,
+                          ratio: 0.35,
+                        ),
+                        const SizedBox(height: 10),
+                        SkillCard(
+                            title: 'Flutter Development',
+                            description:
+                                'I’m developing cross-platform projects using standard Flutter libraries.',
+                            icon: ImageAssetConstants.flutterLogo,
+                            width: width,
+                            ratio: 0.35),
+                      ],
+                    ),
+                    // hello with bio and info
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        HelloWithBio(
+                          width: 3 * width,
+                          ratio: 0.3,
+                        ),
+                        const SizedBox(
+                          height: 35,
+                        ),
+                        Info(width: 3 * width, ratio: 0.3),
+                      ],
+                    )
+                  ],
+                );
               }
             }),
             SizedBox(

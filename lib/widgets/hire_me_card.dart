@@ -59,7 +59,7 @@ class HireMeCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Starting New Project?${constraints.maxWidth}",
+                          "Starting New Project?",
                           style: TextStyle(
                               fontSize: 42, fontWeight: FontWeight.bold),
                         ),
@@ -114,7 +114,7 @@ class HireMeCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Starting New Project?${constraints.maxWidth}",
+                          "Starting New Project?",
                           style: TextStyle(
                               fontSize: 38, fontWeight: FontWeight.bold),
                         ),
@@ -169,7 +169,7 @@ class HireMeCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Starting New Project?${constraints.maxWidth}",
+                          "Starting New Project?",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
@@ -227,7 +227,7 @@ class HireMeCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Starting New Project?${constraints.maxWidth}",
+                            "Starting New Project?",
                             style: TextStyle(
                                 fontSize: 12, fontWeight: FontWeight.bold),
                           ),
@@ -311,7 +311,7 @@ class HireMeCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Starting New Project?${constraints.maxWidth}",
+                        "Starting New Project?",
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold),
                       ),
