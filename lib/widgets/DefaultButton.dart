@@ -20,29 +20,33 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        padding: const EdgeInsets.symmetric(
-          vertical: kDefaultPadding,
-          horizontal: kDefaultPadding * 2.5,
-        ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        primary: CustomColors.gray,
-        foregroundColor: CustomColors.primary
-      ),
-      onPressed: press,
-      child: Row(
-        children: [
-          Image.asset(imageSrc, height: imageHeight),
-          const SizedBox(width: kDefaultPadding),
-          Text(
-              text,
-            style: TextStyle(
-              fontSize: fontSize
+    return LayoutBuilder(
+        builder: (context, constraints) {
+          return   TextButton(
+            style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  vertical: kDefaultPadding,
+                  horizontal: kDefaultPadding * 2.5,
+                ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50)),
+                primary: CustomColors.gray,
+                foregroundColor: CustomColors.primary
             ),
-          ),
-        ],
-      ),
-    );
+            onPressed: press,
+            child: Row(
+              children: [
+                Image.asset(imageSrc, height: imageHeight),
+                const SizedBox(width: kDefaultPadding),
+                Text(
+                  text,
+                  style: TextStyle(
+                      fontSize: fontSize
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
   }
 }
