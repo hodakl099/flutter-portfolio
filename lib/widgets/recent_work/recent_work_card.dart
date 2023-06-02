@@ -15,14 +15,17 @@ class RecentWorkCard extends StatefulWidget {
     required this.press,
     required this.url,
     this.height = 320,
-    this.width = 540
+    this.width = 540,  this.titleSize = 24,  this.optionalImgHeight = 0,  this.optionalImgWidth = 0
   }) : super(key: key);
 
   final int index;
   final VoidCallback press;
   final String url;
+  final double optionalImgHeight;
+  final double optionalImgWidth;
   final double width;
   final double height;
+  final double titleSize;
 
   @override
   _RecentWorkCardState createState() => _RecentWorkCardState();
@@ -61,6 +64,8 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                 width: 100,
               ) else   Image.asset(
                recentWorks[widget.index].image,
+               height:widget.optionalImgHeight,
+               width:widget.optionalImgWidth,
              ),
               Expanded(
                 child: Padding(
@@ -69,7 +74,9 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(recentWorks[widget.index].category.toUpperCase()),
+                      Text(
+                          recentWorks[widget.index].category.toUpperCase()
+                      ),
                       SizedBox(height: kDefaultPadding / 2),
                       Text(
                         recentWorks[widget.index].title,
@@ -77,7 +84,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                             .of(context)
                             .textTheme
                             .headlineSmall
-                            ?.copyWith(height: 1.5),
+                            ?.copyWith(height: 1.5, fontSize: widget.titleSize),
                       ),
 
                       SizedBox(height: kDefaultPadding),
@@ -85,7 +92,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                         style: TextButton.styleFrom(
                             padding: const EdgeInsets.symmetric(
                               vertical: kDefaultPadding,
-                              horizontal: kDefaultPadding * 2.5,
+                              horizontal: 0,
                             ),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),

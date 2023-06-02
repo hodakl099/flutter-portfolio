@@ -7,18 +7,16 @@ import '../../utils/constants.dart';
 import '../hire_me_card.dart';
 import '../section_title.dart';
 
-
-
 class RecentWorkWidget extends StatelessWidget {
   final GlobalKey recentWorkKey;
-  
-  const RecentWorkWidget({Key? key, required this.recentWorkKey}) : super(key: key);
-  
+
+  const RecentWorkWidget({Key? key, required this.recentWorkKey})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-        builder: (context, constraints) {
-      if(constraints.maxWidth >= 1100) {
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth >= 1100) {
         return Container(
           key: recentWorkKey,
           margin: const EdgeInsets.only(top: kDefaultPadding * 6),
@@ -47,11 +45,14 @@ class RecentWorkWidget extends StatelessWidget {
                   runSpacing: kDefaultPadding * 2,
                   children: List.generate(
                     recentWorks.length,
-                        (index) =>
-                        RecentWorkCard(index: index,
-                          press: () {},
-                          key: null,
-                          url: recentWorks[index].url,),
+                    (index) => RecentWorkCard(
+                      optionalImgHeight :300,
+                      optionalImgWidth :300,
+                      index: index,
+                      press: () {},
+                      key: null,
+                      url: recentWorks[index].url,
+                    ),
                   ),
                 ),
               ),
@@ -59,7 +60,7 @@ class RecentWorkWidget extends StatelessWidget {
             ],
           ),
         );
-      } else if(constraints.maxWidth >= Breakpoints.lg) {
+      } else if (constraints.maxWidth >= Breakpoints.lg) {
         return Container(
           key: recentWorkKey,
           margin: const EdgeInsets.only(top: kDefaultPadding * 1),
@@ -85,12 +86,14 @@ class RecentWorkWidget extends StatelessWidget {
                 child: Column(
                   children: List.generate(
                     recentWorks.length * 2 - 1,
-                        (index) {
+                    (index) {
                       if (index.isOdd) {
                         return SizedBox(height: 20);
                       } else {
                         final cardIndex = index ~/ 2;
                         return RecentWorkCard(
+                          optionalImgHeight :300,
+                          optionalImgWidth :300,
                           index: cardIndex,
                           press: () {},
                           key: null,
@@ -105,7 +108,7 @@ class RecentWorkWidget extends StatelessWidget {
             ],
           ),
         );
-      } else if(constraints.maxWidth >= 560) {
+      } else if (constraints.maxWidth >= 560) {
         return Container(
           key: recentWorkKey,
           margin: const EdgeInsets.only(top: kDefaultPadding * 6),
@@ -133,12 +136,14 @@ class RecentWorkWidget extends StatelessWidget {
                 child: Column(
                   children: List.generate(
                     recentWorks.length * 2 - 1,
-                        (index) {
+                    (index) {
                       if (index.isOdd) {
                         return SizedBox(height: 20);
                       } else {
                         final cardIndex = index ~/ 2;
                         return RecentWorkCard(
+                          optionalImgHeight :300,
+                          optionalImgWidth :300,
                           index: cardIndex,
                           press: () {},
                           key: null,
@@ -153,56 +158,111 @@ class RecentWorkWidget extends StatelessWidget {
             ],
           ),
         );
-      }  else if(constraints.maxWidth >= 480) {
-       return Container(
-         key: recentWorkKey,
-         margin: const EdgeInsets.only(top: kDefaultPadding * 6),
-         width: double.infinity,
-         // just for demo
-         // height: 600,
-         decoration: const BoxDecoration(
-           color: Color(0xff424346),
-         ),
-         child: Column(
-           children: [
-             Transform.translate(
-               offset: Offset(0, -80),
-               child: HireMeCard(),
-             ),
-             const SectionTitle(
-               title: "Recent Projects",
-               fontSize: 40,
-               subTitle: "My Strong Arenas",
-               color: Color(0xFFFFB100),
-             ),
-             SizedBox(height: kDefaultPadding * 1.5),
-             SizedBox(
-               width: 600,
-               child: Column(
-                 children: List.generate(
-                   recentWorks.length * 2 - 1,
-                       (index) {
-                     if (index.isOdd) {
-                       return SizedBox(height: 20);
-                     } else {
-                       final cardIndex = index ~/ 2;
-                       return RecentWorkCard(
-                         index: cardIndex,
-                         press: () {},
-                         key: null,
-                         url: recentWorks[cardIndex].url,
-                       );
-                     }
-                   },
-                 ),
-               ),
-             ),
-             SizedBox(height: kDefaultPadding * 5),
-           ],
-         ),
-       );
+      } else if (constraints.maxWidth >= 480) {
+        return Container(
+          key: recentWorkKey,
+          margin: const EdgeInsets.only(top: kDefaultPadding * 6),
+          width: double.infinity,
+          // just for demo
+          // height: 600,
+          decoration: const BoxDecoration(
+            color: Color(0xff424346),
+          ),
+          child: Column(
+            children: [
+              Transform.translate(
+                offset: Offset(0, -80),
+                child: HireMeCard(),
+              ),
+              const SectionTitle(
+                title: "Recent Projects",
+                fontSize: 40,
+                subTitle: "My Strong Arenas",
+                color: Color(0xFFFFB100),
+              ),
+              SizedBox(height: kDefaultPadding * 1.5),
+              SizedBox(
+                width: 600,
+                child: Column(
+                  children: List.generate(
+                    recentWorks.length * 2 - 1,
+                    (index) {
+                      if (index.isOdd) {
+                        return SizedBox(height: 20);
+                      } else {
+                        final cardIndex = index ~/ 2;
+                        return RecentWorkCard(
+                          optionalImgHeight :300,
+                          optionalImgWidth :300,
+                          index: cardIndex,
+                          press: () {},
+                          key: null,
+                          url: recentWorks[cardIndex].url,
+                        );
+                      }
+                    },
+                  ),
+                ),
+              ),
+              SizedBox(height: kDefaultPadding * 5),
+            ],
+          ),
+        );
+      } else if (constraints.maxWidth >= 0) {
+        return Container(
+          key: recentWorkKey,
+          margin: const EdgeInsets.only(top: kDefaultPadding * 6),
+          width: double.infinity,
+          // just for demo
+          // height: 600,
+          decoration: const BoxDecoration(
+            color: Color(0xff424346),
+          ),
+          child: Column(
+            children: [
+              Transform.translate(
+                offset: Offset(0, -80),
+                child: HireMeCard(),
+              ),
+              const SectionTitle(
+                title: "Recent Projects",
+                fontSize: 20,
+                subTitle: "My Strong Arenas",
+                color: Color(0xFFFFB100),
+              ),
+              SizedBox(height: kDefaultPadding * 1.5),
+              SizedBox(
+                width: 700,
+                child: Column(
+                  children: List.generate(
+                    recentWorks.length * 2 - 1,
+                    (index) {
+                      if (index.isOdd) {
+                        return SizedBox(height: 20);
+                      } else {
+                        final cardIndex = index ~/ 2;
+                        return RecentWorkCard(
+                          titleSize: 12,
+                          optionalImgHeight :150,
+                          optionalImgWidth :150,
+                          height: 300,
+                          width: 300,
+                          index: cardIndex,
+                          press: () {},
+                          key: null,
+                          url: recentWorks[cardIndex].url,
+                        );
+                      }
+                    },
+                  ),
+                ),
+              ),
+              SizedBox(height: kDefaultPadding * 5),
+            ],
+          ),
+        );
       } else {
-        return  Container(
+        return Container(
           key: recentWorkKey,
           margin: const EdgeInsets.only(top: kDefaultPadding * 6),
           width: double.infinity,
@@ -229,7 +289,7 @@ class RecentWorkWidget extends StatelessWidget {
                 child: Column(
                   children: List.generate(
                     recentWorks.length * 2 - 1,
-                        (index) {
+                    (index) {
                       if (index.isOdd) {
                         return SizedBox(height: 20);
                       } else {
@@ -252,7 +312,6 @@ class RecentWorkWidget extends StatelessWidget {
           ),
         );
       }
-    }
-    );
+    });
   }
 }
