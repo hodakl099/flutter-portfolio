@@ -164,7 +164,7 @@ class HireMeCard extends StatelessWidget {
                       child: VerticalDivider(),
                     ),
                   ),
-                   const Expanded(
+                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -222,7 +222,7 @@ class HireMeCard extends StatelessWidget {
                         child: VerticalDivider(),
                       ),
                     ),
-                     const Expanded(
+                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -239,8 +239,7 @@ class HireMeCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                Expanded(
-                  child: TextButton(
+                   TextButton(
                     style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                           vertical: 4,
@@ -266,7 +265,7 @@ class HireMeCard extends StatelessWidget {
                                 fontSize:   12
                             ),
                           ),
-                        ) else   const Expanded(
+                        ) else   Expanded(
                           child: Text(
                             'Hire Me!',
                             style: TextStyle(
@@ -277,7 +276,6 @@ class HireMeCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
                   ],
                 ),
               ),
@@ -306,7 +304,7 @@ class HireMeCard extends StatelessWidget {
                     child: VerticalDivider(),
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -342,7 +340,7 @@ class HireMeCard extends StatelessWidget {
                     children: [
                       Image.asset("assets/images/hand.png", height: 16),
                       const SizedBox(width: kDefaultPadding),
-                      const Text(
+                      Text(
                         'Hire Me!',
                         style: TextStyle(
                             fontSize: 12
