@@ -164,7 +164,7 @@ class HireMeCard extends StatelessWidget {
                       child: VerticalDivider(),
                     ),
                   ),
-                   Expanded(
+                   const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -222,7 +222,7 @@ class HireMeCard extends StatelessWidget {
                         child: VerticalDivider(),
                       ),
                     ),
-                     Expanded(
+                     const Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -266,7 +266,7 @@ class HireMeCard extends StatelessWidget {
                                 fontSize:   12
                             ),
                           ),
-                        ) else   Expanded(
+                        ) else   const Expanded(
                           child: Text(
                             'Hire Me!',
                             style: TextStyle(
@@ -306,7 +306,7 @@ class HireMeCard extends StatelessWidget {
                     child: VerticalDivider(),
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -342,7 +342,7 @@ class HireMeCard extends StatelessWidget {
                     children: [
                       Image.asset("assets/images/hand.png", height: 16),
                       const SizedBox(width: kDefaultPadding),
-                      Text(
+                      const Text(
                         'Hire Me!',
                         style: TextStyle(
                             fontSize: 12
